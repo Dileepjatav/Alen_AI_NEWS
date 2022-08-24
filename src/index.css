@@ -1,13 +1,154 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+#root,html,body{
+  height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+body{
+  background-color: #ffffff;
 }
+
+*{
+  box-sizing: border-box;
+  margin: 0;;
+  padding: 0;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+html{
+  scroll-behavior: smooth;
+
+}
+.navbar{
+  background-color: #395B64;
+  
+
+}
+.navlist{
+  align-items: center;
+  width: 100%;
+  justify-content: space-evenly;
+
+}
+.navlist li a{
+  display: flex;
+  justify-content: space-between;
+  text-decoration: none;
+  color: white;
+  
+}
+.navlist li{
+  list-style: none;
+}
+.flex{
+  display: flex;
+}
+
+
+.newsbox{
+  display:grid ;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: center; 
+  max-width: 90%;
+  margin: auto;
+  overflow: hidden;
+  
+
+}
+.newscard{
+  
+  background-color: white;
+  margin: 10px;
+  
+  
+}
+.newscard:hover{
+ 
+  color: #eb6452;
+  transition: 0.3s;
+
+  
+}
+.card_info{
+  margin: 10px 10px;
+}
+.card_info h3{
+  
+  font-size: 20px;
+}
+.card_info p{
+  font-size: 15px;
+  color: rgb(107, 104, 99);
+  font-family: cursive;
+  margin-top: 10px;
+ 
+  overflow: hidden;
+}
+.card_info a{
+  text-decoration: none;
+  color: #77b465;
+  font-weight: 500;
+  
+  
+}
+.card_info a:hover{
+  color: #59145c;
+}
+.card_more{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+  text-align: center;
+}
+
+
+.card_img{
+  width: 100%;
+  
+  background-size: cover;
+}
+
+.img_home{
+  display: flex;
+  height: 300px;
+  justify-content: center;
+  margin: auto;
+}
+.News_cmd{
+  display: grid;
+  max-width: 100%;
+  height: 250px;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  margin: 0 50px;
+
+}
+
+.Cmd_card{
+  display: grid;
+  background-color: #defa5f;
+  color: #0f0e0e;
+  margin: 8px;
+  text-align: center;
+  justify-content: space-around;
+  padding: 20px;
+  overflow: hidden;
+  
+}
+.Cmd_card h2{
+  text-transform: capitalize;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: 400;
+  
+  
+}
+
+.Cmd_card h3{
+  font-weight: 500;
+  padding-bottom: 0;
+}
+.cmd_para{
+  text-transform: capitalize;
+  
+}
+
+
+
+
