@@ -8,17 +8,32 @@ import {Main} from './Component/Main/Main'
 import Loder from './Component/Loader/Loader';
 import { Routes, Route } from 'react-router-dom';
 import { About } from './Component/Header/Navbar/About';
+import { Contactus } from './Component/Contact/Contactus';
 
 
 
 const keyalen='146c6ed4ee7cb79d523f38df990981cc2e956eca572e1d8b807a3e2338fdd0dc/stage'
 
-const API_KEY='0cad94fe52e64aebb93ff044f09b478f'
+// const API_KEY='0cad94fe52e64aebb93ff044f09b478f'
+const API_KEY='72df3eae2c0d48c7aec0ebe33454d24f'
+
+const error=[
+  {
+    title:"Error 404 Not Found",
+    author: null,
+    content: null,
+    description: "",
+    publishedAt: "",
+    source: {id: null, name: ''},
+    url: "",
+    urlToImage: "",
+}]
 
 function App() {
   const [news,setnews]=useState([])
   const [api,setapi]=useState("");
   const [loader,setloader]=useState(false);
+  const [result,setresult]=useState("");
 
 
   useEffect(()=>{
@@ -35,6 +50,8 @@ function App() {
           let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?`;
           NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
           setapi(NEWS_API_URL)
+          let res=`${commandData.props}`;
+          setresult(res);
 
           console.log(NEWS_API_URL);
            
@@ -44,13 +61,38 @@ function App() {
           let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?country=in`;
           NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
           setapi(NEWS_API_URL)
+          let res=`${commandData.props}`;
+          setresult(res);
 
           console.log(NEWS_API_URL);
            
         }
+        if(commandData.command==='news of'){
+          let listen=`q=${commandData.props.toString().toLowerCase().split(" ").join('-')}`
+          let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?`;
+          NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
+          setapi(NEWS_API_URL)
+          let res=`${commandData.props}`;
+          setresult(res);
+
+          console.log(NEWS_API_URL);
+           
+        }
+
+        if(commandData.command==='top headline'){
+          
+          let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${API_KEY}`;    
+          setapi(NEWS_API_URL)
+          setresult("Top Headline");
+
+          console.log(NEWS_API_URL);
+           
+        }
+
         if(commandData.command==='clear news'){
           setnews([]);
-          console.log(news)
+          setresult("");
+          
         }
 
 
@@ -60,6 +102,7 @@ function App() {
   },)
 
   useEffect(()=>{
+    setnews([])
     setloader(true);
     axios.get(api)
     .then((data)=>{
@@ -69,45 +112,39 @@ function App() {
     })
     .catch((e)=>{
       setloader(false);
+      setresult(e.message);
       console.log(e.message)
     })
-    console.log("working api")
+    // console.log(news)
     
     
   },[api])
 
-  const search=()=>{
-    setapi('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=0cad94fe52e64aebb93ff044f09b478f')
-    console.log("api fetch")
-    console.table(news)
-
-  }
+  
   const rem=()=>{
     setnews([]);
-    console.log("news remove")
+    setresult("")
+  
 
   }
-
-  
 
   
   return (
     <div className="App">
       
-      
-      <Navbar ></Navbar>
+      <Navbar setapi={setapi} setresult={setresult} api_key={API_KEY} ></Navbar>
       {loader ?<Loder></Loder>:false}
-      <button onClick={()=>{search()}} >Click</button>
-        <button onClick={()=>{rem()}} >remove</button>
       
       <Routes>
-        <Route path='/' element={<Main news={news } ></Main>}></Route>
+        <Route path='/' element={<Main news={news } result={result} remove={rem} ></Main>}></Route>
         
         <Route path='/about' element={<About></About>}></Route>
+        <Route path='/contactus' element={<Contactus></Contactus>}></Route>
+
 
       </Routes>
-      
-     
+
+
      
     </div>
   );

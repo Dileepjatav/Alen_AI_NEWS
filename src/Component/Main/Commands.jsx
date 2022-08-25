@@ -13,8 +13,8 @@ export const Commands = () => {
         },
         {   
             title:"News by Categories",
-            mid:{mid_title:"Business,Entertainment,General,Health ,Science, sport ,TEchnology"},
-            try:"Search business ",
+            mid:{mid_title:"Business,Entertainment,General,Health ,Technology"},
+            try:"Search Entertainment ",
             midtitle:"Categories",
             color:"#ECB390"
 
@@ -22,8 +22,8 @@ export const Commands = () => {
         },
         {   
             title:"News by Terms",
-            mid:{mid_title:"Bitcoin,Playstatic 5,SmartPhone,Donald Trump.. "},
-            try:"Whatsup with Play station 5",
+            mid:{mid_title:"Bitcoin,iphone,SmartPhone,Russia. "},
+            try:"News of Russia",
             midtitle:"Terms",
             color:"#CEE5D0"
 
