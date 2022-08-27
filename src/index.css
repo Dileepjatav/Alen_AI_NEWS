@@ -329,7 +329,7 @@ i{
 
 
 .about_youtube{
-  background-color: #dfebaa;
+  background-color: #b7c288;
   width: 80%;
   height: 600px;
   display: grid;
@@ -338,11 +338,7 @@ i{
   
 }
 
-/* .youtube{
-  
-  width: 100%;
-  
-} */
+
 span{
   color: #eb4e27;
 }
@@ -367,10 +363,12 @@ span{
 .intro_container{
   
   width: 100%;
+  
   margin: 0 auto;
   display: flex;
   justify-content: center;
   align-items: center;
+  
 }
 .sc_img{
   width: 100%;
@@ -378,6 +376,29 @@ span{
 }
 .sc_img h1{
   margin: 50px 10px;
+}
+
+.img_container{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-top: 50px;
+  row-gap: 2px;
+  column-gap: 2px;
+
+
+}
+.img_container img{
+  width: 100%;
+  border: 5px solid black;
+
+}
+#scimg{
+  margin-top: 50px;
+}
+iframe{
+  border: 2px solid black;
+
 }
 
 

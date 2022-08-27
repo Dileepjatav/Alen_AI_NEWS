@@ -1,5 +1,8 @@
 import React from 'react'
-
+import img1 from '../Image/Screenshot (367).png'
+import img2 from '../Image/Screenshot (368).png'
+import img3 from '../Image/Screenshot (369).png'
+import img4 from '../Image/Screenshot (365).png'
 
 export const Introduction = () => {
   return (
@@ -44,6 +47,15 @@ export const Introduction = () => {
         <div className='youtube' >
             
             <iframe width='100%' height="580" src="https://www.youtube.com/embed/8Km-Vm3XbQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+
+        <h1 id='scimg' >Screen shot of News </h1>
+        <div className='img_container' >
+            <img src={img4} ></img>
+            <img src={img1} ></img>
+            <img src={img2} ></img>
+            <img src={img3} ></img>
+            
         </div>
 
         
