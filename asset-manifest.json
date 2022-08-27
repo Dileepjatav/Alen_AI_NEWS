@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/Alen_AI_NEWS/static/css/main.ed791d53.css",
+    "main.js": "/Alen_AI_NEWS/static/js/main.fd4625e0.js",
+    "static/js/787.c4a5d4d0.chunk.js": "/Alen_AI_NEWS/static/js/787.c4a5d4d0.chunk.js",
+    "static/media/Futuristic.jpeg": "/Alen_AI_NEWS/static/media/Futuristic.3bdb7e841e785e2957f5.jpeg",
+    "index.html": "/Alen_AI_NEWS/index.html",
+    "main.ed791d53.css.map": "/Alen_AI_NEWS/static/css/main.ed791d53.css.map",
+    "main.fd4625e0.js.map": "/Alen_AI_NEWS/static/js/main.fd4625e0.js.map",
+    "787.c4a5d4d0.chunk.js.map": "/Alen_AI_NEWS/static/js/787.c4a5d4d0.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.ed791d53.css",
+    "static/js/main.fd4625e0.js"
+  ]
+}
