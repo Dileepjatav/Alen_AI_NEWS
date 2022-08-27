@@ -11,13 +11,14 @@ export const Navbar = (props) => {
     <>
     <div className='flex navbar' >
         <div className='app_name'>
-          <h3  >Alen <span>AI</span>  NEWS & WEATHER</h3>
+          <h3  >Alen <span>AI</span> NEWS & WEATHER </h3>
           
         </div>
         
         <ul className='flex navlist' >
             <li> <NavLink to='./' >Home</NavLink></li>
             <li><NavLink to='./about'>About</NavLink></li>
+            <li><NavLink to='./introduction'>Watch</NavLink></li>
             <li  onClick={()=>{props.setapi(top_headline);props.setresult("Top headline")}}><NavLink to='./'>Top headline</NavLink></li>
             <li onClick={()=>{props.setapi(sport);props.setresult("Sport")}} > <NavLink to='./'>Sport</NavLink></li>
             <li onClick={()=>{props.setapi(science);props.setresult("Science")}} ><NavLink to='./'>Science</NavLink></li>

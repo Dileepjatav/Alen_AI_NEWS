@@ -312,6 +312,79 @@ i{
 
 
 
+.video-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.video-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+
+.about_youtube{
+  background-color: #dfebaa;
+  width: 80%;
+  height: 600px;
+  display: grid;
+  justify-content: center;
+   
+  
+}
+
+/* .youtube{
+  
+  width: 100%;
+  
+} */
+span{
+  color: #eb4e27;
+}
+.vid_hed{
+  width: 100%;
+  margin: 50px;
+  
+}
+.vid_hed p{
+  font-weight: 600;
+  font-family: cursive;
+}
+
+.pro_dec{
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 20px 0;
+  
+}
+.intro_container{
+  
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sc_img{
+  width: 100%;
+  background-color: #f7f7f7;
+}
+.sc_img h1{
+  margin: 50px 10px;
+}
+
+
+
+
+
+
 
 
 

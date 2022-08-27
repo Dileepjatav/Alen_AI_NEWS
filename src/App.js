@@ -9,6 +9,7 @@ import Loder from './Component/Loader/Loader';
 import { Routes, Route } from 'react-router-dom';
 import { About } from './Component/Header/Navbar/About';
 import { Contactus } from './Component/Contact/Contactus';
+import { Introduction } from './Component/Introduction/Introduction';
 
 
 
@@ -98,11 +99,13 @@ function App() {
       let article=data.data.articles
       setloader(false);
       setnews(article)
+      console.log(api)
     })
     .catch((e)=>{
       setloader(false);
       setresult(e.message);
       console.log(e.message)
+      console.log(api)
     })
     
     
@@ -126,6 +129,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Main news={news } result={result} remove={rem} ></Main>}></Route>
+        <Route path='/introduction' element={<Introduction></Introduction>} ></Route>
         
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contactus' element={<Contactus></Contactus>}></Route>
