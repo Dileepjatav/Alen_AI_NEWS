@@ -17,17 +17,6 @@ const keyalen='146c6ed4ee7cb79d523f38df990981cc2e956eca572e1d8b807a3e2338fdd0dc/
 // const API_KEY='0cad94fe52e64aebb93ff044f09b478f'
 const API_KEY='72df3eae2c0d48c7aec0ebe33454d24f'
 
-const error=[
-  {
-    title:"Error 404 Not Found",
-    author: null,
-    content: null,
-    description: "",
-    publishedAt: "",
-    source: {id: null, name: ''},
-    url: "",
-    urlToImage: "",
-}]
 
 function App() {
   const [news,setnews]=useState([])
@@ -115,7 +104,7 @@ function App() {
       setresult(e.message);
       console.log(e.message)
     })
-    // console.log(news)
+    
     
     
   },[api])
