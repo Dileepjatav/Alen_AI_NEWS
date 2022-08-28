@@ -51,10 +51,10 @@ export const Introduction = () => {
 
         <h1 id='scimg' >Screen shot of News </h1>
         <div className='img_container' >
-            <img src={img4} ></img>
-            <img src={img1} ></img>
-            <img src={img2} ></img>
-            <img src={img3} ></img>
+            <img src={img4} alt="img1" ></img>
+            <img src={img1} alt="img2" ></img>
+            <img src={img2}  alt="img3" ></img>
+            <img src={img3} alt="img4"></img>
             
         </div>
 
