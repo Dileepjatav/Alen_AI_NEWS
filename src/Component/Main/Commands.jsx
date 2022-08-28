@@ -47,16 +47,18 @@ export const Commands = () => {
             
             {cmd.map((ele,i)=>(
                     <div className='Cmd_card' key={i} style={{backgroundColor:ele.color}} >
-                        <h2>{ele.title}</h2>
                         <div>
-                            <h5>{ele.midtitle}</h5>
-                            <p className='cmd_para' >{ele.mid.mid_title}</p>
+                            <h2>{ele.title}</h2>
+                            <div>
+                                <h5>{ele.midtitle}</h5>
+                                <p className='cmd_para' >{ele.mid.mid_title}</p>
 
-                        </div>
-                        <div>
-                        <h5>Try saying...</h5>
-                        <p> {ele.try} </p>
+                            </div>
+                            <div>
+                            <h5>Try saying...</h5>
+                            <p> {ele.try} </p>
 
+                            </div>
                         </div>
 
                         

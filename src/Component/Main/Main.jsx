@@ -40,9 +40,10 @@ export const Main = (props) => {
                                                 <h3>{ele.title}</h3>
                                                 <p>{ele.description}</p>
                                                 <div className='card_more'>
+                                                    
                                                     <a href={ele.url} target='_blank'  rel="noreferrer" >Read More...</a>
                                                     <h6 style={{color:'black'}} >Publish on {new Date(ele.publishedAt).toDateString()}</h6>
-
+                                                    
                                                 </div>
 
                                                

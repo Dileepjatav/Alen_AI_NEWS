@@ -5,6 +5,9 @@
 body{
   background-color: #ffffff;
 }
+.App{
+  width: 100%;
+}
 
 *{
   box-sizing: border-box;
@@ -20,6 +23,7 @@ html{
 .navbar{
   background-color: #395B64;
   height: 50px;
+  justify-content:center;
   
 
 }
@@ -36,9 +40,11 @@ html{
   color: white;
   text-transform: uppercase;
   
+  
 }
 .navlist li{
   list-style: none;
+  margin: 0 10px;
 }
 .navlist li a:hover{
   color: #ff0000;
@@ -181,14 +187,15 @@ html{
   margin:25px 0;
   align-items: center;
 }
-.clear_btn{
+
   
-}
+
 .app_name{
   display: flex;
   width: 25%;
   justify-content: center;
   align-items: center;
+  margin-right: 50px;
 
 }
 .app_name h3{
@@ -307,6 +314,11 @@ i{
   display: flex;
   justify-content: space-evenly;
 }
+.nav_name{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 
 
@@ -399,6 +411,103 @@ span{
 iframe{
   border: 2px solid black;
 
+}
+
+
+@media only screen and (max-width: 700px) {
+  body {
+    background-color: lightblue;
+  }
+  .navbar{
+    display: grid;
+    height: fit-content;
+    text-align: center;
+    width: 100%;
+
+  }
+  .navlist{
+    display: grid;
+    text-align: center;
+  }
+  .navlist li{
+    margin: 5px 0;
+    text-align: center;
+    
+  }
+  .pro_dec{
+    font-size: x-small;
+  }
+  .pro_dec h3{
+    text-align: center;
+    font-size: small;
+  }
+  .vid_hed{
+    font-size: x-small;
+    margin: 0;
+    padding: 15px;
+  }
+  .nav_name{
+    width: 100%;
+    justify-content: center;
+
+  }
+  .app_name{
+    width: 100%;
+    padding: 25px;
+    background-color: #0f0e0e;
+  }
+  .News_cmd{
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+ 
+    
+  }
+  .Cmd_card{
+    width: 100%;
+    
+    margin: 10px;
+  }
+  .Cmd_card h2{
+    font-size: medium;
+  }
+  .Cmd_card p{
+    font-size:x-small;
+  }
+  .img_home{
+    max-width:100%;
+  }
+  .about_com{
+    display: flex;
+    flex-direction: column;
+    
+  }
+  .about_text p{
+    font-size: smaller;
+  }
+  .img_container{
+    display: flex;
+    flex-direction: column;
+  }
+  .contact_list{
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+  }
+  .newsbox{
+    display: flex;
+    flex-direction: column;
+  }
+  .card_info h3{
+    font-size:medium;
+  }
+  .card_info p{
+    font-size: x-small;
+  }
+  .News_box_heading h2{
+    font-size: medium;
+  }
 }
 
 

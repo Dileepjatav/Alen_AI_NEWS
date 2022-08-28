@@ -14,6 +14,7 @@ export const Navbar = (props) => {
           <h3  >Alen <span>AI</span> NEWS & WEATHER </h3>
           
         </div>
+        <div className='nav_name'  >
         
         <ul className='flex navlist' >
             <li> <NavLink to='./' >Home</NavLink></li>
@@ -25,6 +26,7 @@ export const Navbar = (props) => {
             <li><NavLink to='./contactus'>Contact us</NavLink></li>
             
         </ul>
+        </div>
 
     </div>
 
