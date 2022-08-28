@@ -1,16 +1,20 @@
 {
   "files": {
-    "main.css": "/Alen_AI_NEWS/static/css/main.ed791d53.css",
-    "main.js": "/Alen_AI_NEWS/static/js/main.fd4625e0.js",
+    "main.css": "/Alen_AI_NEWS/static/css/main.08cd9ca6.css",
+    "main.js": "/Alen_AI_NEWS/static/js/main.09930251.js",
     "static/js/787.c4a5d4d0.chunk.js": "/Alen_AI_NEWS/static/js/787.c4a5d4d0.chunk.js",
+    "static/media/Screenshot (369).png": "/Alen_AI_NEWS/static/media/Screenshot (369).e1f06dd9295f3a7012a0.png",
+    "static/media/Screenshot (368).png": "/Alen_AI_NEWS/static/media/Screenshot (368).6af738cc3c1dbcd756f7.png",
+    "static/media/Screenshot (367).png": "/Alen_AI_NEWS/static/media/Screenshot (367).968c2e7e0dede2c5ba5a.png",
     "static/media/Futuristic.jpeg": "/Alen_AI_NEWS/static/media/Futuristic.3bdb7e841e785e2957f5.jpeg",
+    "static/media/Screenshot (365).png": "/Alen_AI_NEWS/static/media/Screenshot (365).863eb6fc1ac265915865.png",
     "index.html": "/Alen_AI_NEWS/index.html",
-    "main.ed791d53.css.map": "/Alen_AI_NEWS/static/css/main.ed791d53.css.map",
-    "main.fd4625e0.js.map": "/Alen_AI_NEWS/static/js/main.fd4625e0.js.map",
+    "main.08cd9ca6.css.map": "/Alen_AI_NEWS/static/css/main.08cd9ca6.css.map",
+    "main.09930251.js.map": "/Alen_AI_NEWS/static/js/main.09930251.js.map",
     "787.c4a5d4d0.chunk.js.map": "/Alen_AI_NEWS/static/js/787.c4a5d4d0.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ed791d53.css",
-    "static/js/main.fd4625e0.js"
+    "static/css/main.08cd9ca6.css",
+    "static/js/main.09930251.js"
   ]
 }
