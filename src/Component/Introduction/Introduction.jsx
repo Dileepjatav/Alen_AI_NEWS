@@ -19,7 +19,7 @@ export const Introduction = () => {
                      
                 </li>
                 <li><h5>Features</h5>
-                    <p>  Search News by Voice command ,Click Read more to get more detailed News , Latest news</p>
+                    <p> Responsive, Search News by Voice command ,Click Read more to get more detailed News , Latest news</p>
                 </li>
                 <li><h5>Tech stack</h5>
                     <p> HTML, CSS, JavaScript, React, News API, Alen Studio</p>
@@ -52,11 +52,14 @@ export const Introduction = () => {
         <h1 id='scimg' >Screen shot of News </h1>
         <div className='img_container' >
             <img src={img4} alt="img1" ></img>
-            <img src={img1} alt="img2" ></img>
+            <img src={img1}  alt="img5" ></img>
             <img src={img2}  alt="img3" ></img>
             <img src={img3} alt="img4"></img>
             
         </div>
+
+
+
 
         
         
