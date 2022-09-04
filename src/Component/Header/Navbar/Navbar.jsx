@@ -25,7 +25,7 @@ export const Navbar = (props) => {
             <li onClick={()=>{props.setapi(sport);props.setresult("Sport")}} > <NavLink to='./'>Sport</NavLink></li>
             <li onClick={()=>{props.setapi(science);props.setresult("Science")}} ><NavLink to='./'>Science</NavLink></li>
             <li><NavLink to='./contactus'>Contact us</NavLink></li>
-            <li><NavLink to='./free'>free</NavLink></li>
+           
             
         </ul>
         </div>
