@@ -16,8 +16,10 @@ import { Introduction } from './Component/Introduction/Introduction';
 
 const keyalen='146c6ed4ee7cb79d523f38df990981cc2e956eca572e1d8b807a3e2338fdd0dc/stage'
 
+
 // const API_KEY='0cad94fe52e64aebb93ff044f09b478f'
 const API_KEY='72df3eae2c0d48c7aec0ebe33454d24f'
+const free_API='pub_108443f91818a86ca7e191fe8a0a5d84be4ac'
 
 
 function App() {
@@ -32,36 +34,34 @@ function App() {
       key:keyalen,
       onCommand:(commandData)=>{
 
-        if(commandData.command==="take name"){
-          console.log(commandData)
-        }
+        // if(commandData.command==='show news'){
+        //   let listen=`sources=${commandData.props.toString().toLowerCase().split(" ").join('-')}`
+        //   let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?`;
+        //   NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
+        //   setapi(NEWS_API_URL)
+        //   let res=`${commandData.props}`;
+        //   setresult(res);
 
-        if(commandData.command==='show news'){
-          let listen=`sources=${commandData.props.toString().toLowerCase().split(" ").join('-')}`
-          let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?`;
-          NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
-          setapi(NEWS_API_URL)
-          let res=`${commandData.props}`;
-          setresult(res);
-
-          console.log(NEWS_API_URL);
+        //   console.log(NEWS_API_URL);
            
-        }
+        // }
+
         if(commandData.command==='search'){
           let listen=`&category=${commandData.props.toString().toLowerCase().split(" ").join('-')}`
-          let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?country=in`;
-          NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
+          let NEWS_API_URL=`https://newsdata.io/api/1/news?apikey=${free_API}&country=in`;
+          NEWS_API_URL=`${NEWS_API_URL}${listen}`          
           setapi(NEWS_API_URL)
           let res=`${commandData.props}`;
           setresult(res);
 
           console.log(NEWS_API_URL);
+
            
         }
         if(commandData.command==='news of'){
-          let listen=`q=${commandData.props.toString().toLowerCase().split(" ").join('-')}`
-          let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?`;
-          NEWS_API_URL=`${NEWS_API_URL}${listen}&apiKey=${API_KEY}`          
+          let listen=`&q=${commandData.props.toString().toLowerCase().split(" ").join('%20')}`
+          let NEWS_API_URL=`https://newsdata.io/api/1/news?&apiKey=${free_API}`;
+          NEWS_API_URL=`${NEWS_API_URL}${listen}`          
           setapi(NEWS_API_URL)
           let res=`${commandData.props}`;
           setresult(res);
@@ -70,15 +70,6 @@ function App() {
            
         }
 
-        if(commandData.command==='top headline'){
-          
-          let NEWS_API_URL=`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${API_KEY}`;    
-          setapi(NEWS_API_URL)
-          setresult("Top Headline");
-
-          console.log(NEWS_API_URL);
-           
-        }
 
         if(commandData.command==='clear news'){
           setnews([]);
@@ -97,10 +88,11 @@ function App() {
     setloader(true);
     axios.get(api)
     .then((data)=>{
-      let article=data.data.articles
+      let article=data.data.results
       setloader(false);
       setnews(article)
       console.log(api)
+      console.log(article);
     })
     .catch((e)=>{
       setloader(false);
@@ -125,7 +117,7 @@ function App() {
   return (
     <div className="App">
       
-      <Navbar setapi={setapi} setresult={setresult} api_key={API_KEY} ></Navbar>
+      <Navbar setapi={setapi} setresult={setresult} free_API={free_API} ></Navbar>
       {loader ?<Loder></Loder>:false}
       
       <Routes>
@@ -134,6 +126,8 @@ function App() {
         
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contactus' element={<Contactus></Contactus>}></Route>
+        
+
 
 
       </Routes>

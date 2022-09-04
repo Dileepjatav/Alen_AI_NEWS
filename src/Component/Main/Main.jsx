@@ -35,14 +35,21 @@ export const Main = (props) => {
             { props.news!==undefined ?  props.news.map((ele,i)=>(
 
                                        <div className='newscard' key={i} >
-                                            <img src={ele.urlToImage} alt={i} className='card_img' ></img>
+                                        
+                                             <div className='img_div' >
+                                                <img src={ele.image_url} alt={i} className='card_img' ></img>
+                                                
+
+                                             </div>
+                                             <h5 style={{color:'black'}} >Publish on {new Date(ele.pubDate).toDateString()}</h5>
+                                            
                                             <div className='card_info'>
                                                 <h3>{ele.title}</h3>
                                                 <p>{ele.description}</p>
                                                 <div className='card_more'>
                                                     
-                                                    <a href={ele.url} target='_blank'  rel="noreferrer" >Read More...</a>
-                                                    <h6 style={{color:'black'}} >Publish on {new Date(ele.publishedAt).toDateString()}</h6>
+                                                    <a href={ele.link} target='_blank'  rel="noreferrer" >Read More...</a>
+                                                   
                                                     
                                                 </div>
 

@@ -3,9 +3,10 @@ import { NavLink } from 'react-router-dom'
 
 
 export const Navbar = (props) => {
-  let top_headline=`https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey=${props.api_key}`;
-  let sport=`https://newsapi.org/v2/top-headlines?category=sports&apiKey=${props.api_key}`;
-  let science=`https://newsapi.org/v2/top-headlines?category=science&apiKey=${props.api_key}`;
+  let top_headline=`https://newsdata.io/api/1/news?apikey=${props.free_API}&country=in&category=top`;
+  let sport=`https://newsdata.io/api/1/news?apikey=${props.free_API}&country=in&category=sports`;
+  let science=`https://newsdata.io/api/1/news?apikey=${props.free_API}&country=in&category=science`;
+  
   
   return (
     <>
@@ -24,6 +25,7 @@ export const Navbar = (props) => {
             <li onClick={()=>{props.setapi(sport);props.setresult("Sport")}} > <NavLink to='./'>Sport</NavLink></li>
             <li onClick={()=>{props.setapi(science);props.setresult("Science")}} ><NavLink to='./'>Science</NavLink></li>
             <li><NavLink to='./contactus'>Contact us</NavLink></li>
+            <li><NavLink to='./free'>free</NavLink></li>
             
         </ul>
         </div>

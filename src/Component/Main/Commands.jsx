@@ -13,15 +13,15 @@ export const Commands = () => {
         },
         {   
             title:"News by Categories",
-            mid:{mid_title:"Business,Entertainment,General,Health ,Technology"},
-            try:"Search Entertainment ",
+            mid:{mid_title:"Business,Entertainment,food,Health ,politics,world"},
+            try:"Show Entertainment ",
             midtitle:"Categories",
             color:"#ECB390"
-
+        
 
         },
         {   
-            title:"News by Terms",
+            title:"News by Keyword",
             mid:{mid_title:"Bitcoin,iphone,SmartPhone,Russia. "},
             try:"News of Russia",
             midtitle:"Terms",

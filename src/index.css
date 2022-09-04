@@ -128,12 +128,18 @@ html{
   text-align: center;
 }
 
+.img_div{
+  height: 250px;
+  width: 400px;
+  background-color: #b3afaf;
+}
+
 
 
 .card_img{
   width: 100%;
-  
-  background-size: cover;
+  height: 100%;
+
 }
 
 .img_home{
