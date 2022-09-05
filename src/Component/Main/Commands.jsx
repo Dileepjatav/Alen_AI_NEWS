@@ -30,7 +30,7 @@ export const Commands = () => {
         },
 
         {   
-            title:"News by Source",
+            title:"Commands",
             mid:{mid_title:" CNN,Wired,BBC News, Time,IGN,Buzzlead,ABC news"},
             try:"Open CNN",
             midtitle:"Sources",
