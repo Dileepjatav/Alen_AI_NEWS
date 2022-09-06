@@ -1,4 +1,5 @@
 import React from 'react'
+import { Introduction } from '../../Introduction/Introduction'
 
 export const About = () => {
   return (
@@ -8,7 +9,7 @@ export const About = () => {
         <h1>About us</h1>
         <div className='about_text'>
         <p>
-        Alan is News and Weather is a Voice recognition AI Platform that allows you to add a voice interface to your app without overhead.
+        Alan is News and Weather is a Voice recognition Platform that allows you to add a voice interface to your app without overhead.
         </p>
         
         <p>
@@ -20,8 +21,11 @@ export const About = () => {
         
 
       </div>
+      
 
     </div>
+    <Introduction></Introduction>
+    
   
   </>
     

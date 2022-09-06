@@ -2,7 +2,9 @@ import React from 'react'
 import img1 from '../Image/Screenshot (367).png'
 import img2 from '../Image/Screenshot (368).png'
 import img3 from '../Image/Screenshot (369).png'
-import img4 from '../Image/Screenshot (365).png'
+import img4 from '../Image/Screenshot (371).png'
+
+
 
 export const Introduction = () => {
   return (
@@ -10,7 +12,7 @@ export const Introduction = () => {
      <div className='intro_container' >
       <div className='about_youtube' >
         <div className='pro_dec' >
-            <h3 style={{'margin':' 20px 0' }} >Watch this video to know more about this application</h3>
+            <h3 style={{'margin':' 20px 0' }} >Know more about this application</h3>
             <ul style={{'marginLeft':'50px'}} >
                 <li> 
                     
@@ -34,24 +36,24 @@ export const Introduction = () => {
 
             
 
-            <p>Purpose of making this video because The <span>News web Api</span> is not free for Production, 
-                Request from browser not allow and return error 426 
+            {/* <p>Purpose of making this video because The <span>News web Api</span> is not free for Production, 
+                
             </p>
             <p>And it is working fine on my local host server and  <span> if i want to work well in Online i will need to buy Business Plan of $499 from NEWES API </span></p>
 
-            
+             */}
 
         </div>
         
         
-        <div className='youtube' >
+        {/* <div className='youtube' >
             
             <iframe width='100%' height="580" src="https://www.youtube.com/embed/8Km-Vm3XbQk" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-        </div>
+        </div> */}
 
         <h1 id='scimg' >Screen shot of News </h1>
         <div className='img_container' >
-            <img src={img4} alt="img1" ></img>
+            <img src={img4}  alt="img5" ></img>
             <img src={img1}  alt="img5" ></img>
             <img src={img2}  alt="img3" ></img>
             <img src={img3} alt="img4"></img>

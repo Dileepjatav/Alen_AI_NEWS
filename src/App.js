@@ -9,7 +9,7 @@ import Loder from './Component/Loader/Loader';
 import { Routes, Route } from 'react-router-dom';
 import { About } from './Component/Header/Navbar/About';
 import { Contactus } from './Component/Contact/Contactus';
-import { Introduction } from './Component/Introduction/Introduction';
+
 
 
 
@@ -136,7 +136,7 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Main news={news } home={home} result={result} remove={rem} ></Main>}></Route>
-        <Route path='/introduction' element={<Introduction></Introduction>} ></Route>
+        
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contactus' element={<Contactus></Contactus>}></Route>
   
