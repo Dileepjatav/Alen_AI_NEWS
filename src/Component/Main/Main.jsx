@@ -1,9 +1,10 @@
 import React from 'react'
 
 import { News } from './News'
-import img from './No_image_available.png'
+
 
 export const Main = (props) => {
+    console.log("From main",props.home)
     
 
 

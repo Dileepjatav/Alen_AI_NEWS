@@ -30,6 +30,7 @@ function App() {
 
 
 
+
   useEffect(()=>{
     alanBtn({
       key:keyalen,
@@ -89,7 +90,12 @@ function App() {
     
     setnews([])
     setloader(true);
-   
+    // if(check!==0){
+      
+      
+
+    // }
+    // setcheck(1);
     sethome(false)
     
      
@@ -136,7 +142,6 @@ function App() {
       
       <Routes>
         <Route path='/' element={<Main news={news } home={home} result={result} remove={rem} ></Main>}></Route>
-        
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contactus' element={<Contactus></Contactus>}></Route>
   

@@ -1,0 +1,58 @@
+
+intent('who are you',
+      reply('Alan is a  Voice recognition News application Platform that Show News.Hear you can Search News by Your Voice Command'));
+
+intent('hi alan i am $(source* (.*))',(p)=>{
+    const name=p.source.value
+    
+    p.play(`hi ${name} (what you want)`);
+
+})
+
+
+intent('open $(source* (.*))',p=>{
+    const name=p.source.value
+    p.play(`opening ${name}`);
+    p.play({command:'show news',props:name});
+    
+})
+
+intent('clear news',p=>{
+    p.play('ok News clear');
+    p.play({command:'clear news'});
+})
+
+intent('Show $(source2* (.*))',p=>{
+    const name=p.source2.value
+    p.play(`${name} News Showing`);
+    p.play({command:'search',props:name});
+})
+
+intent('news of $(source3* (.*))',p=>{
+    const name=p.source3.value
+    p.play(`ok i got the news of ${name} `);
+    p.play({command:'news of',props:name});
+})
+
+intent('Give me news',p=>{
+    const name="Latest News"
+    p.play('i got latest news');
+    p.play({command:'give me',props:name});
+})
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
