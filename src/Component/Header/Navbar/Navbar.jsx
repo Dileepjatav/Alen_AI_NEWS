@@ -18,13 +18,15 @@ export const Navbar = (props) => {
         <div className='nav_name'  >
         
         <ul className='flex navlist' >
-            <li> <NavLink to='./' >Home</NavLink></li>
-            <li><NavLink to='./about'>About</NavLink></li>
+            <li> <NavLink to='./' onClick={()=>{props.remove()}} >Home</NavLink></li>
+           
             <li><NavLink to='./introduction'>Watch</NavLink></li>
             <li  onClick={()=>{props.setapi(top_headline);props.setresult("Top headline")}}><NavLink to='./'>Top headline</NavLink></li>
             <li onClick={()=>{props.setapi(sport);props.setresult("Sport")}} > <NavLink to='./'>Sport</NavLink></li>
             <li onClick={()=>{props.setapi(science);props.setresult("Science")}} ><NavLink to='./'>Science</NavLink></li>
+            <li><NavLink to='./about'>About</NavLink></li>
             <li><NavLink to='./contactus'>Contact us</NavLink></li>
+            
            
             
         </ul>

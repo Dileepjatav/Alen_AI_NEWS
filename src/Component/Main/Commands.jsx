@@ -14,7 +14,7 @@ export const Commands = () => {
         {   
             title:"News by Categories",
             mid:{mid_title:"Business,Entertainment,food,Health ,politics,world"},
-            try:"Show Entertainment ",
+            try:"Show Entertainment ,Show Health ,etc",
             midtitle:"Categories",
             color:"#ECB390"
         
@@ -31,9 +31,9 @@ export const Commands = () => {
 
         {   
             title:"Commands",
-            mid:{mid_title:" CNN,Wired,BBC News, Time,IGN,Buzzlead,ABC news"},
-            try:"Open CNN",
-            midtitle:"Sources",
+            mid:{mid_title:" "},
+            try:"who are you ,Give me news ,Hi alan i am (Your name)",
+            midtitle:"",
             color:"C8B6E2"
 
         },

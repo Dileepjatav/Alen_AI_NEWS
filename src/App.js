@@ -26,6 +26,9 @@ function App() {
   const [api,setapi]=useState("");
   const [loader,setloader]=useState(false);
   const [result,setresult]=useState("");
+  const [home,sethome]=useState(true);
+  const [check,setcheck]=useState(0);
+
 
 
   useEffect(()=>{
@@ -57,6 +60,16 @@ function App() {
           console.log(NEWS_API_URL);
            
         }
+        if(commandData.command==='give me'){
+          
+          let NEWS_API_URL=`https://newsdata.io/api/1/news?&apiKey=${free_API}&country=au,ca,in`;       
+          setapi(NEWS_API_URL)
+          let res=`${commandData.props}`;
+          setresult(res);
+
+          console.log(NEWS_API_URL);
+           
+        }
 
 
         if(commandData.command==='clear news'){
@@ -71,14 +84,25 @@ function App() {
 
   },)
 
+ 
+  
   useEffect(()=>{
+    
     setnews([])
     setloader(true);
+    if(check!==0){
+      sethome(false)
+      
+
+    }
+    setcheck(1);
+    
+     
     axios.get(api)
     .then((data)=>{
       let article=data.data.results
-      setloader(false);
-      setnews(article)
+      setloader(false); 
+      setnews(article)     
       console.log(api)
       console.log(article);
     })
@@ -93,10 +117,13 @@ function App() {
     
   },[api])
 
+
+
   
   const rem=()=>{
     setnews([]);
     setresult("")
+    sethome(true);
   
 
   }
@@ -105,19 +132,15 @@ function App() {
   return (
     <div className="App">
       
-      <Navbar setapi={setapi} setresult={setresult} free_API={free_API} ></Navbar>
+      <Navbar setapi={setapi} setresult={setresult} remove={rem} free_API={free_API} ></Navbar>
       {loader ?<Loder></Loder>:false}
       
       <Routes>
-        <Route path='/' element={<Main news={news } result={result} remove={rem} ></Main>}></Route>
+        <Route path='/' element={<Main news={news } home={home} result={result} remove={rem} ></Main>}></Route>
         <Route path='/introduction' element={<Introduction></Introduction>} ></Route>
-        
         <Route path='/about' element={<About></About>}></Route>
         <Route path='/contactus' element={<Contactus></Contactus>}></Route>
-        
-
-
-
+  
       </Routes>
 
 

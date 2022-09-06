@@ -1,27 +1,23 @@
 import React from 'react'
 
 import { News } from './News'
+import img from './No_image_available.png'
 
 export const Main = (props) => {
-    let res
-    if(props.news===undefined){
-        res=false
-    }else{
-        res=true
-    }
-
     
+
 
   return (
     <>  
         <div>
-            { true?<News></News>:false}
+            {props.home?<News></News>:false}
         </div>
 
         <div>
-            {res?<div className='News_box_heading'>
+            {!props.home?<div className='News_box_heading'>
                 <h2>{props.result}</h2>
             </div>:false}
+
             {/* <div className='clear_btn' >
                 <button onClick={()=>{props.remove()}}>btn</button>
             </div> */}
