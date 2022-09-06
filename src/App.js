@@ -27,7 +27,6 @@ function App() {
   const [loader,setloader]=useState(false);
   const [result,setresult]=useState("");
   const [home,sethome]=useState(true);
-  const [check,setcheck]=useState(0);
 
 
 
@@ -90,12 +89,8 @@ function App() {
     
     setnews([])
     setloader(true);
-    if(check!==0){
-      sethome(false)
-      
-
-    }
-    setcheck(1);
+   
+    sethome(false)
     
      
     axios.get(api)
@@ -116,6 +111,10 @@ function App() {
     
     
   },[api])
+  useEffect(()=>{
+    rem();
+
+  },[])
 
 
 
