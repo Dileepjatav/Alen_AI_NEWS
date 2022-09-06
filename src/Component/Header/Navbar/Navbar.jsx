@@ -14,7 +14,7 @@ export const Navbar = (props) => {
     <>
     <div className='flex navbar' >
         <div className='app_name'>
-          <h3  >Alen <span>AI</span> NEWS & WEATHER </h3>
+          <h3  >Al <span>Voice</span> News </h3>
           
         </div>
         <div className='nav_name'  >

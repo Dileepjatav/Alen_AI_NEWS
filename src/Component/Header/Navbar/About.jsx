@@ -9,11 +9,11 @@ export const About = () => {
         <h1>About us</h1>
         <div className='about_text'>
         <p>
-        Alan is News and Weather is a Voice recognition Platform that allows you to add a voice interface to your app without overhead.
+          Al voice News application help you to see updated news with your Voice command 
         </p>
         
         <p>
-          Hear you can Search News by Your Voice Command 
+          You may now search for news using voice commands.
         
         </p>
 
