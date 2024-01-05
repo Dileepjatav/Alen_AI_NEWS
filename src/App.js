@@ -30,7 +30,6 @@ function App() {
 
 
 
-
   useEffect(()=>{
     alanBtn({
       key:keyalen,
@@ -113,18 +112,13 @@ function App() {
       console.log(e.message)
       console.log(api)
     })
-    
-    
-    
+
   },[api])
   useEffect(()=>{
     rem();
 
   },[])
 
-
-
-  
   const rem=()=>{
     setnews([]);
     setresult("")
